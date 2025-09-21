@@ -1,0 +1,2 @@
+# MultiLayerAttackTool
+基于意淫，MultiLayerAttackTool 是一款专为红队攻防演练和网络安全研究设计的高性能异步多层混合攻击模拟框架。集成了四层攻击向量，采用先进的异步IO架构，可实现极致的网络压力测试。
