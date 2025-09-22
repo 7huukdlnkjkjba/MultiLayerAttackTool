@@ -55,7 +55,7 @@ cd MultiLayerAttackTool
 pip install -r requirements.txt
 
 # 授予权限（Linux）
-chmod +x multilayer_attack.py
+chmod +x 多层混合攻击.py
 ```
 
 ```
